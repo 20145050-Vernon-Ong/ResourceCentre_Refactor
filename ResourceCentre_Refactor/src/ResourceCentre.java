@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 
 public class ResourceCentre {
-
+private static final int OPTION_RETURN = 4;
+private static final int OPTION_LOAN = 3;
+private static final int OPTION_ADD = 2;
+private static final int OPTION_VIEW = 1;
+public static final int OPTION_QUIT =5;
 
 	public static void main(String[] args) {
 
@@ -15,17 +19,17 @@ public class ResourceCentre {
 
 		int option = 0;
 
-		while (option != 5) {
+		while (option != OPTION_QUIT) {
 
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
 
-			if (option == 1) {
+			if (option == OPTION_VIEW) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
-			} else if (option == 2) {
+			} else if (option == OPTION_ADD) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -50,7 +54,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 3) {
+			} else if (option == OPTION_LOAN) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -69,7 +73,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 4) {
+			} else if (option == OPTION_RETURN) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -87,7 +91,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 5) {
+			} else if (option == OPTION_QUIT) {
 				System.out.println("Bye!");
 			} else {
 				System.out.println("Invalid option");
@@ -99,11 +103,11 @@ public class ResourceCentre {
 
 	public static void menu() {
 		ResourceCentre.setHeader("RESOURCE CENTRE APP");
-		System.out.println("1. OPTION_VIEW");
-		System.out.println("2. OPTION_ADD");
-		System.out.println("3. OPTION_LOAN");
-		System.out.println("4. OPTION_RETURN");
-		System.out.println("5. OPTION_QUIT");
+		System.out.println("1. Display Inventory");
+		System.out.println("2. Add item");
+		System.out.println("3. Loan item");
+		System.out.println("4. Return item");
+		System.out.println("5. Quit");
 		Helper.line(80, "-");
 
 	}
