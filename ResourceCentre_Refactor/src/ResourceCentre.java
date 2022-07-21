@@ -32,9 +32,7 @@ public static final int OPTION_QUIT =5;
 			} else if (option == OPTION_ADD) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
-				ResourceCentre.setHeader("ITEM TYPES");
-				System.out.println("1. Camcorder");
-				System.out.println("2. Chromebook");
+				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -57,9 +55,7 @@ public static final int OPTION_QUIT =5;
 			} else if (option == OPTION_LOAN) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
-				ResourceCentre.setHeader("ITEM TYPES");
-				System.out.println("1. Camcorder");
-				System.out.println("2. Chromebook");
+				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -76,9 +72,7 @@ public static final int OPTION_QUIT =5;
 			} else if (option == OPTION_RETURN) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
-				ResourceCentre.setHeader("ITEM TYPES");
-				System.out.println("1. Camcorder");
-				System.out.println("2. Chromebook");
+				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 				if (itemType == 1) {
@@ -99,6 +93,12 @@ public static final int OPTION_QUIT =5;
 
 		}
 
+	}
+
+	private static void itemTypeMenu() {
+		ResourceCentre.setHeader("ITEM TYPES");
+		System.out.println("1. Camcorder");
+		System.out.println("2. Chromebook");
 	}
 
 	public static void menu() {
