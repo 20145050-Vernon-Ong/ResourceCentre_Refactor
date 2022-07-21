@@ -99,11 +99,11 @@ public class ResourceCentre {
 
 	public static void menu() {
 		ResourceCentre.setHeader("RESOURCE CENTRE APP");
-		System.out.println("1. Display Inventory");
-		System.out.println("2. Add item");
-		System.out.println("3. Loan item");
-		System.out.println("4. Return item");
-		System.out.println("5. Quit");
+		System.out.println("1. OPTION_VIEW");
+		System.out.println("2. OPTION_ADD");
+		System.out.println("3. OPTION_LOAN");
+		System.out.println("4. OPTION_RETURN");
+		System.out.println("5. OPTION_QUIT");
 		Helper.line(80, "-");
 
 	}
